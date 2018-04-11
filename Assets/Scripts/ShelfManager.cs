@@ -8,9 +8,9 @@ public class ShelfManager : MonoBehaviour {
 	private string manifestFileName;
 	public List<BookObject> bookInfos;
 
-	// Use this for initialization
-	void Start () {
-		manifestFileName = "manifest.json";  //set to passed file name
+	// load the shelf with data before game starts!
+	void Awake () {
+		manifestFileName = "Manifests/manifest.json";  //set to passed file name
 		LoadShelfData();
 	}
 	private void LoadShelfData()
@@ -26,11 +26,13 @@ public class ShelfManager : MonoBehaviour {
 			//gets array of json string objects
 			string[] allBookJsons = JsonHelper.GetJsonObjectArray(dataAsJson, "books");
 		
-			int i = 0;
+			int i=0;
 			foreach (string jsonObj in allBookJsons)
 			{ 
 				bookInfos[i++].book = JsonUtility.FromJson<Book>(jsonObj);  //add string object as JSONObject to array of books
+
 			}
+
 		}
 		else
 		{

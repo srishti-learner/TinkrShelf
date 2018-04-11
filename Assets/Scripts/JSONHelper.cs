@@ -106,24 +106,4 @@ public class JsonHelper
 		return null;
 	}
 }
-
-
-
-/* public class JsonHelper
-{
-	public static T[] getJsonArray<T>(string json)
-	{
-		Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(json);
-		foreach (var book in wrapper.books) {
-			Debug.Log (book);
-		}
-		return wrapper.books;
-	}
-
-	[System.Serializable]
-	private class Wrapper<T>
-	{
-		public T[] books;
 	
-	}
-} */

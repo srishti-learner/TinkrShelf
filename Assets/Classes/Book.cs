@@ -7,7 +7,7 @@ using UnityEngine;
 [System.Serializable]
 public class Book{
 	
-	public string fileName, thumbnail, title, author, language;
+	public string fileName, pathToThumbnail, title, author, language;
 	public int bookId, version, readingLevel;
-	public string[] tags;
+	public List<string> tags;
 }
