@@ -30,7 +30,7 @@ public class ShelfManager : MonoBehaviour {
 			foreach (string jsonObj in allBookJsons)
 			{ 
 				bookInfos[i++].book = JsonUtility.FromJson<Book>(jsonObj);  //add string object as JSONObject to array of books
-
+				bookInfos[i-1].SetCoverThumbnail();
 			}
 
 		}
